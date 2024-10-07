@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logoBgBlack.png">
+    <script src="https:kit.fontawesome.com/6bda94a8de.js" crossorigin="anonymous"></script>
+    <title>Denner dos Santos</title>
+</head>
+
+<body>
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <header id="home">
+        <!--logo-->
+        <div class="logos">
+            <img class="logoBgBlack" width="70px" src="images/logoBgBlack.png" alt="">
+            <img class="logoBgWhite" width="70px" src="images/logo.png" alt="">
+        </div>
+
+        <!--menu nav-->
+        <nav id="menu">
+            <ul class="menu-list">
+                <li><a href="#home">Home
+                        <div class="line"></div>
+                    </a></li>
+                <li><a href="#sobre">Sobre
+                        <div class="line"></div>
+                    </a></li>
+                <li><a href="#portifolio">Portifólio
+                        <div class="line"></div>
+                    </a></li>
+                <li><a href="#contato">Contato
+                        <div class="line"></div>
+                    </a></li>
+            </ul>
+
+            <script>
+
+                var menuButton = document.getElementById("menu-btn");
+                var menu = document.getElementById("menu");
+
+                menu.style.transition("2s");
+
+                function showmenu() {
+                    if (menu.style.display === "none") {
+                        menu.style.display = "block";
+                    } else {
+                        menu.style.display = "none";
+                    }
+                };
+
+            </script>
+        </nav>
+
+        <!--dark mode-->
+        <div class="dark-btn">
+            <input type="checkbox" name="change-theme" id="change-theme">
+            <label for="change-theme">
+                <i id="moon" class="fa-regular fa-moon"></i>
+                <i id="sun" class="fa-regular fa-sun"></i>
+            </label>
+
+            <script>
+                const chengeThemeBtn = document.querySelector("#change-theme");
+
+                function toggleDarkMode() {
+                    document.body.classList.toggle("dark");
+                };
+
+                chengeThemeBtn.addEventListener("change", function () {
+                    toggleDarkMode("dark");
+
+                    localStorage.removeItem("dark");
+
+                    if (document.body.classList.contains("dark")) {
+                        localStorage.setItem("dark", 1);
+                    }
+                });
+            </script>
+        </div>
+
+        <!--botao menu hamburger-->
+        <button onclick="showmenu()" id="menu-btn"><i class="fa-solid fa-bars fa-shake"></i></button>
+
+    </header>
+
+    <main>
+        <div class="intro">
+            <h1>Denner Simão dos Santos</h1>
+            <p>Gosta muito de tecnologia, tem formação em desenvolvimento web full-stack. Além disso, sua jornada não se
+                limita apenas ao mundo digital, também é um atleta dedicado.
+            </p>
+            <hr>
+            <div class="icons">
+                <a href="https:www.linkedin.com/in/denner-dos-santos-258b37222/""><i class=" fa-brands
+                    fa-linkedin-in"></i></a>
+                <a href="https:github.com/denner17"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="elements">
+            <img class="spin" src="images/element.png" alt="">
+            <div class="perfil">
+                <img src="images/foto_perfil.jpg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre mim</h2>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <div class="secimg"></div>
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <div class="secimg"></div>
+                <div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat nesciunt reiciendis
+                    voluptatum harum iure magnam adipisci consectetur, ut ducimus, dolore, deserunt molestias hic vero!
+                    Culpa inventore cum maxime et dicta!</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <div class="secimg"></div>
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <div class="secimg"></div>
+                <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+    </section>
+    <script>
+        fetch('https://api.unsplash.com/photos/random/?count=5&client_id=52d8369eb3e2576a5f5b6423865e074e9c7045761bff1ac5664ff3e0bdb57a1d')
+            .then(response => response.json())
+            .then(data => {
+                data.forEaach(function (image, i) {
+                    document.querySelector("#slide-" + (i + 1)).innerHTML = `
+                 <img src="${image.urls.regular}" alt="">
+                 <p class="author-info">
+                   <a href="${image.links.html}?utm_source=slider-thing&utm_medium=referral&utm_campaign=api-credit">Photo by ${image.user.name}</a> on <a href="https://unsplash.com/">Unsplash</a>
+                 </p>
+               `;
+                });
+            });
+    </script>
+    <!-- <script>
+        const carouselContainer = document.querySelector('.carousel-container');
+        const slides = document.querySelectorAll('.content');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            carouselContainer.style.transform = `translateX(-${currentIndex * 80}%)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 10) % slides.length;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 10 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+    </script> -->
+
+    <div class="competencias">
+        <h2>Hard Skills</h2>
+
+        <div class="ferramentas">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-php"></i>
+            <i class="fa-brands fa-python"></i>
+        </div>
+    </div>
+
+
+    <div class="coisas_que_gosto">
+        <h2>Coisas Que Gosto</h2>
+
+        <section>
+            <div>
+                <img width="140px" src="https:freepnglogo.com/images/all_img/1691829482canva-logo-black.png" alt="">
+
+                <hr>
+
+                <p>Fazer designs criativos com o aplicativo Canva</p>
+            </div>
+            <div>
+                <img width="135px" src="https:cdn-icons-png.flaticon.com/512/484/484582.png" alt="">
+
+                <hr>
+
+                <p>Estudar novos idiomas e culturas de outros países</p>
+            </div>
+            <div>
+                <img width="135px" src="https:cdn-icons-png.flaticon.com/512/4441/4441433.png" alt="">
+
+                <hr>
+
+                <p>Participar de projetos sociais na comunidade periférica</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="softSkills">
+        <h2>Soft Skills</h2>
+        <ul>
+            <li>Empatia</li>
+            <li>Comunicação</li>
+            <li>Liderança</li>
+            <li>Criatividade</li>
+            <li>Positividade</li>
+        </ul>
+    </div>
+
+    <section id="portifolio" class="projetos">
+        <h2>Projetos</h2>
+
+        <div class="board">
+            <div class="card">
+                <div class="preview">
+                    <img src="/images/previews-projects/limpo-ambiente.gif" alt="">
+
+                    <h3>Limpo Ambiente</h3>
+                </div>
+                <div class="btns">
+                    <a href="https://limpo-ambiente.github.io/Limpo-Ambiente/"><button class="btn1">ver
+                            site</button></a>
+                    <a href="https://github.com/Limpo-Ambiente/Limpo-Ambiente"><button class="btn2">ver
+                            repositório</button></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="preview">
+                    <img src="/images/previews-projects/Magento.gif" alt="">
+
+                    <h3>Magento</h3>
+                </div>
+                <div class="btns">
+                    <a href="https://denner17.github.io/Magento-apresenta-o-/"><button class="btn1">ver
+                            site</button></a>
+                    <a href="https://github.com/denner17/Magento-apresenta-o-"><button class="btn2">ver
+                            repositório</button></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="preview">
+                    <img src="/images/previews-projects/my-portifolio.png" alt="">
+
+                    <h3>My portifolio</h3>
+
+                </div>
+                <div class="btns">
+                    <a href=""><button class="btn1">ver site</button></a>
+                    <a href=""><button class="btn2">ver repositório</button></a>
+                </div>
+            </div>
+        </div>
+
+        <button>ver mais <span> &#8594;</span></button>
+    </section>
+
+    <footer>
+        <p>Se você pensa que pode ou pensa que não pode, em ambos está certo.</p>
+
+        <h3>&copy;2024 Denner Simão dos Santos WebDev</h3>
+
+        <hr>
+
+        <div class="container">
+            <div class="linksRapidos">
+                <h2>Links Rápidos</h2>
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#sobre">Sobre mim</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#portifolio">Projetos</a>
+                </nav>
+            </div>
+
+            <div id="contato" class="contato">
+                <h2>Contato</h2>
+                <nav>
+                    <span>E-mail: <br> <a href="">dennersimao2@gmail.com</a></span>
+                    <span>Telefone: <br> (51) +51 992714177</span>
+                </nav>
+            </div>
+
+            <div class="redesSociais">
+                <h2>Siga-me nas redes sociais</h2>
+                <div class="icons2">
+                    <a href="https:www.instagram.com/denner_04/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https:www.linkedin.com/in/denner-dos-santos-258b37222/"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https:github.com/denner17"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <img class="logoFooter" src="images/logoBgBlack.png" alt="">
+
+    </footer>
+</body>
+
+</html>
